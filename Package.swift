@@ -7,7 +7,7 @@ let swiftSettings: [SwiftSetting] = [.enableExperimentalFeature("StrictConcurren
 
 let package = Package(
     name: "swift-websocket",
-    platforms: [.macOS(.v13), .iOS(.v16), .tvOS(.v16)],
+    platforms: [.macOS(.v13), .iOS(.v16), .tvOS(.v16), .visionOS(.v2)],
     products: [
         .library(name: "WSClient", targets: ["WSClient"]),
         .library(name: "WSCompression", targets: ["WSCompression"]),
