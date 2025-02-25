@@ -21,7 +21,7 @@ jobs:
     timeout-minutes: 15
     strategy:
       matrix:
-        image: ["swift:5.10", "swift:6.0"]
+        image: ["swift:5.10", "swift:6.0", "swiftlang/swift:nightly-6.1-jammy"]
     container:
       image: ${{ matrix.image }}
     services:
@@ -58,3 +58,4 @@ jobs:
       uses: codecov/codecov-action@v5
       with:
         files: info.lcov
+        token: ${{ secrets.CODECOV_TOKEN }}
